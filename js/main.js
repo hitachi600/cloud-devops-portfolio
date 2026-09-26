@@ -106,11 +106,11 @@ function initTypingEffect() {
   if (!typingElement) return;
 
   const phrases = [
-    "AWS S3 & Cloud Storage Architect",
-    "DevOps & Docker Specialist",
-    "Python Backend & REST API Engineer",
-    "CI/CD Pipeline Automation Engineer",
-    "Security & Least-Privilege IAM Practitioner"
+    "AWS Cloud & S3 Architecture Engineer",
+    "Linux System Administration & Bash Specialist",
+    "DevOps, Docker & CI/CD Pipeline Architect",
+    "CCNA Networking & TCP/IP Infrastructure",
+    "Python Backend & REST API Developer"
   ];
 
   let phraseIndex = 0;

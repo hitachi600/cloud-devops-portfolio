@@ -9,8 +9,10 @@ const terminalInput = document.getElementById('terminal-input');
 const COMMANDS = {
   help: () => `
 <span class="text-cyan-400 font-bold">AVAILABLE COMMANDS:</span>
-  <span class="text-amber-300">skills</span>         - View Cloud, DevOps & Backend technical stack
+  <span class="text-amber-300">skills</span>         - View 5 Core Pillars: AWS, Linux, DevOps, CCNA & Python
   <span class="text-amber-300">aws s3 ls</span>      - List AWS S3 bucket resources and cloud status
+  <span class="text-amber-300">linux</span>          - Inspect Linux kernel, bash environment & system status
+  <span class="text-amber-300">ccna</span>           - Inspect CCNA network routing, VLANs & subnet topology
   <span class="text-amber-300">projects</span>       - View featured architecture projects & repos
   <span class="text-amber-300">hire</span>           - Display hireability, status, and contact details
   <span class="text-amber-300">cat resume</span>     - View executive engineering summary
@@ -19,12 +21,31 @@ const COMMANDS = {
 `,
 
   skills: () => `
-<span class="text-cyan-400 font-bold">TECHNICAL SKILLS MATRIX (2026):</span>
-  [Cloud & AWS]       Amazon S3, AWS IAM, Boto3 SDK, SSE-S3, Presigned URLs, EC2
-  [DevOps & CI/CD]    Docker, Docker Compose, Git, GitHub Actions, Linux/Bash, Pytest
-  [Backend & APIs]    Python 3.10+, Flask 3.0, FastAPI, RESTful APIs, SQLAlchemy ORM
-  [Database]          SQLite, PostgreSQL, AWS RDS, Schema Isolation
-  [Security]          PBKDF2 Password Hashing, Least-Privilege IAM, MIME Validation
+<span class="text-cyan-400 font-bold">5 CORE ENGINEERING PILLARS (2026):</span>
+  1. [AWS Cloud]        Amazon S3, IAM Least-Privilege, EC2, VPC, Boto3 SDK, SSE-S3
+  2. [Linux & SysAdmin] Ubuntu/RHEL, Bash Scripting, Systemd, Cron, SSH, Permissions
+  3. [DevOps & CI/CD]   Docker, Docker Compose, Git, GitHub Actions, Pytest Automation
+  4. [CCNA Networking]  TCP/IP, IPv4/IPv6 VLSM Subnetting, Routing (OSPF), VLANs, NAT, DNS
+  5. [Python Backend]   Python 3.10+, Flask 3.0, FastAPI, RESTful APIs, SQLAlchemy ORM
+`,
+
+  linux: () => `
+<span class="text-yellow-400 font-bold">LINUX SYSTEM STATUS:</span>
+  Linux gautham-cloud-node 6.8.0-cloud #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Linux
+  • OS Distro    : Ubuntu 24.04 LTS (Noble Numbat) / RHEL Compatible
+  • Shell        : /bin/bash (v5.2.21)
+  • Active Daemons: systemd, sshd, docker.service, nginx.service
+  • Security     : SSH Ed25519 Keys, UFW Firewall (ACTIVE), Sudo RBAC
+`,
+
+  ccna: () => `
+<span class="text-emerald-400 font-bold">CCNA NETWORK TOPOLOGY & ROUTING TABLE:</span>
+  Gateway of last resort is 10.0.0.1 to network 0.0.0.0
+  C    10.0.1.0/24 is directly connected, GigabitEthernet0/0/0 (VLAN 10 - Web Tier)
+  C    10.0.2.0/24 is directly connected, GigabitEthernet0/0/1 (VLAN 20 - App Tier)
+  O    172.16.0.0/16 [110/2] via 10.0.0.2, 00:14:22 (OSPF Cloud Interconnect)
+  • Protocols    : TCP/IP, UDP, OSPF, BGP, ICMP, ARP, DHCP, DNS
+  • Security     : Stateful Inspection ACLs, NAT/PAT Translation, TLS 1.3
 `,
 
   'aws s3 ls': () => `
