@@ -220,7 +220,7 @@ function initScrollSpy() {
   });
 }
 
-/* ==================== 7. ARCHITECTURE MODAL ==================== */
+/* ==================== 7. ARCHITECTURE & RESUME MODALS ==================== */
 window.openArchitectureModal = function() {
   const modal = document.getElementById('arch-modal');
   if (modal) {
@@ -231,6 +231,22 @@ window.openArchitectureModal = function() {
 
 window.closeArchitectureModal = function() {
   const modal = document.getElementById('arch-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+};
+
+window.openResumeModal = function() {
+  const modal = document.getElementById('resume-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeResumeModal = function() {
+  const modal = document.getElementById('resume-modal');
   if (modal) {
     modal.classList.add('hidden');
     document.body.style.overflow = 'auto';
